@@ -1,0 +1,389 @@
+@import url('plyr-react/plyr.css');
+
+$primaryColor: #146EF5;
+
+// Dashicon
+.dashicons {
+	font-family: dashicons !important;
+}
+
+// Button
+.wp-block-btn-button {
+	* {
+		box-sizing: border-box;
+	}
+
+	.btnButton {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		justify-content: center;
+		text-decoration: none;
+		transition: all 0.3s ease-in-out;
+		cursor: pointer;
+
+		.btnIcon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		img {
+			width: 1em;
+			height: 1em;
+			object-fit: contain;
+		}
+
+		svg {
+			width: 1em;
+			height: 1em;
+			fill: currentColor;
+		}
+
+		i {
+			font-size: inherit;
+			font-style: inherit;
+			color: inherit;
+		}
+	}
+
+	/* START TOOLTIP STYLES */
+	[tooltip] {
+		position: relative;
+		/* opinion 1 */
+	}
+
+	/* Applies to all tooltips */
+	[tooltip]::before,
+	[tooltip]::after {
+		text-transform: none;
+		/* opinion 2 */
+		font-size: 0.9em;
+		/* opinion 3 */
+		line-height: 1;
+		user-select: none;
+		pointer-events: none;
+		position: absolute;
+		display: none;
+		opacity: 0;
+	}
+
+	[tooltip]::before {
+		content: '';
+		border: 5px solid transparent;
+		/* opinion 4 */
+		z-index: 1001;
+		/* absurdity 1 */
+	}
+
+	[tooltip]::after {
+		content: attr(tooltip);
+		/* magic! */
+
+		/* most of the rest of this is opinion */
+		font-family: Helvetica, sans-serif;
+		text-align: center;
+
+		/* 
+			Let the content set the size of the tooltips 
+			but this will also keep them from being obnoxious
+		*/
+		min-width: 3em;
+		max-width: 21em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		padding: 1ch 1.5ch;
+		border-radius: 0.3ch;
+		box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+		background: #333;
+		color: #fff;
+		z-index: 1000;
+		/* absurdity 2 */
+	}
+
+	/* Make the tooltips respond to hover */
+	[tooltip]:hover::before,
+	[tooltip]:hover::after {
+		display: block;
+	}
+
+	/* Don't show empty tooltips */
+	[tooltip='']::before,
+	[tooltip='']::after {
+		display: none !important;
+	}
+
+	/* TOOLTIP POSITION: TOP */
+	[tooltip]:not([tooltip-pos])::before,
+	[tooltip][tooltip-pos^='top']::before {
+		bottom: 100%;
+		border-bottom-width: 0;
+		border-top-color: #333;
+	}
+
+	[tooltip]:not([tooltip-pos])::after,
+	[tooltip][tooltip-pos^='top']::after {
+		bottom: calc(100% + 5px);
+	}
+
+	[tooltip]:not([tooltip-pos])::before,
+	[tooltip]:not([tooltip-pos])::after,
+	[tooltip][tooltip-pos^='top']::before,
+	[tooltip][tooltip-pos^='top']::after {
+		left: 50%;
+		transform: translate(-50%, -0.5em);
+	}
+
+	/* TOOLTIP POSITION: BOTTOM */
+	[tooltip][tooltip-pos^='bottom']::before {
+		top: 100%;
+		border-top-width: 0;
+		border-bottom-color: #333;
+	}
+
+	[tooltip][tooltip-pos^='bottom']::after {
+		top: calc(100% + 5px);
+	}
+
+	[tooltip][tooltip-pos^='bottom']::before,
+	[tooltip][tooltip-pos^='bottom']::after {
+		left: 50%;
+		transform: translate(-50%, 0.5em);
+	}
+
+	/* TOOLTIP POSITION: LEFT */
+	[tooltip][tooltip-pos^='left']::before {
+		top: 50%;
+		border-right-width: 0;
+		border-left-color: #333;
+		left: calc(0em - 5px);
+		transform: translate(-0.5em, -50%);
+	}
+
+	[tooltip][tooltip-pos^='left']::after {
+		top: 50%;
+		right: calc(100% + 5px);
+		transform: translate(-0.5em, -50%);
+	}
+
+	/* TOOLTIP POSITION: RIGHT */
+	[tooltip][tooltip-pos^='right']::before {
+		top: 50%;
+		border-left-width: 0;
+		border-right-color: #333;
+		right: calc(0em - 5px);
+		transform: translate(0.5em, -50%);
+	}
+
+	[tooltip][tooltip-pos^='right']::after {
+		top: 50%;
+		left: calc(100% + 5px);
+		transform: translate(0.5em, -50%);
+	}
+
+	/* KEYFRAMES */
+	@keyframes bntTooltipsVertical {
+		to {
+			opacity: 0.9;
+			transform: translate(-50%, 0);
+		}
+	}
+
+	@keyframes btnTooltipsHorizontal {
+		to {
+			opacity: 0.9;
+			transform: translate(0, -50%);
+		}
+	}
+
+	/* FX All The Things */
+	[tooltip]:not([tooltip-pos]):hover::before,
+	[tooltip]:not([tooltip-pos]):hover::after,
+	[tooltip][tooltip-pos^='top']:hover::before,
+	[tooltip][tooltip-pos^='top']:hover::after,
+	[tooltip][tooltip-pos^='bottom']:hover::before,
+	[tooltip][tooltip-pos^='bottom']:hover::after {
+		animation: bntTooltipsVertical 300ms ease-out forwards;
+	}
+
+	[tooltip][tooltip-pos^='left']:hover::before,
+	[tooltip][tooltip-pos^='left']:hover::after,
+	[tooltip][tooltip-pos^='right']:hover::before,
+	[tooltip][tooltip-pos^='right']:hover::after {
+		animation: btnTooltipsHorizontal 300ms ease-out forwards;
+	}
+
+	.securityModal {
+		position: relative;
+		width: 500px;
+		padding: 30px;
+		background: #ddd;
+		position: fixed;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+		z-index: 100;
+
+		h2 {
+			text-transform: capitalize;
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 20px;
+			margin-top: 0;
+			text-align: left;
+
+			span {
+				font-size: 18px;
+				color: red;
+			}
+		}
+
+		.button {
+			cursor: pointer;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.button_ok {
+			display: block;
+			width: auto;
+			min-height: 0;
+			vertical-align: middle;
+			padding: 10px 25px;
+			margin: 0;
+			font-family: brandon-grotesque, Helvetica, Arial, sans-serif;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 20px;
+			text-align: left;
+			text-decoration: none;
+			text-transform: uppercase;
+			text-shadow: none;
+			cursor: pointer;
+			color: #fff;
+			background-color: $primaryColor;
+			background-image: none;
+			border: 0;
+			border-radius: 3px;
+			box-shadow: none;
+			-webkit-transition: 0.4s;
+			transition: 0.4s;
+
+			&:disabled {
+				opacity: 0.5;
+				cursor: default;
+			}
+		}
+
+		.close-overlay {
+			position: absolute;
+			top: -15px;
+			right: -15px;
+			width: 30px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			text-align: center;
+			border: none;
+			border-radius: 50%;
+			background: #444;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		a.button_login {
+			display: inline-block;
+			width: auto;
+			min-height: 0;
+			vertical-align: middle;
+			padding: 10px 25px;
+			margin: 0;
+			font-family: brandon-grotesque, Helvetica, Arial, sans-serif;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 20px;
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase;
+			text-shadow: none;
+			cursor: pointer;
+			color: #fff;
+			background-color: $primaryColor;
+			background-image: none;
+			border: 0;
+			border-radius: 0;
+			box-shadow: none;
+			-webkit-transition: 0.4s;
+			transition: 0.4s;
+		}
+
+		input {
+			font-family: brandon-grotesque, Helvetica, Arial, sans-serif;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 18px;
+			width: 100% !important;
+			max-width: none;
+			height: auto;
+			color: #555;
+			border: none;
+			border-radius: 0;
+			padding: 10px 15px;
+			box-sizing: border-box;
+			box-shadow: none;
+			margin: 0px 0px 15px 0px;
+		}
+
+		input[type='text'] {
+			font-family: brandon-grotesque, Helvetica, Arial, sans-serif;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 18px;
+			width: 100% !important;
+			max-width: none;
+			height: auto;
+			color: #555;
+			border: none;
+			border-radius: 0;
+			padding: 10px 15px;
+			box-sizing: border-box;
+			box-shadow: none;
+			margin: 0px 0px 15px 0px;
+		}
+
+		.form-control label {
+			display: block;
+			color: inherit;
+			font-size: 14px;
+			font-weight: 600;
+			margin-bottom: 0;
+			color: #333;
+			font-family: brandon-grotesque, Helvetica, Arial, sans-serif;
+			text-align: left;
+
+			&:before {
+				content: '*';
+				color: red;
+			}
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.securityModal {
+			margin: 50px auto 0;
+			width: 90%;
+			padding: 20px;
+
+			h2 {
+				font-size: 25px;
+				line-height: 25px;
+			}
+		}
+	}
+}

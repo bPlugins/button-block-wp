@@ -1,0 +1,116 @@
+$primaryColor: #146EF5;
+
+.bPlTextCLL {
+	.components-base-control__field {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		.components-base-control__label {
+			margin: 0;
+		}
+	}
+}
+
+.bPlPanelBody {
+	.bPlNoEvent {
+		opacity: 0.8;
+		pointer-events: none;
+	}
+}
+
+// Backend Content Modal
+.btnPopupWrap {
+	.popupContent {
+		overflow: initial;
+
+		.components-modal__content {
+			padding: 0;
+			overflow: inherit;
+		}
+
+		.btnContentArea {
+			width: calc(100vw - 60px);
+			height: calc(100vh - 120px);
+
+			.btnContentBox {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				overflow: hidden;
+
+				.btnContentEditor {
+					flex: 1;
+					overflow-y: auto;
+					overflow-x: hidden;
+					padding: 35px;
+
+					.popoverSlotOuter {
+						.popover-slot {
+							.components-popover {
+								position: absolute;
+							}
+						}
+					}
+				}
+
+				.btnContentSidebar {
+					width: 300px;
+					border-left: 1px solid #e0e0e0;
+					overflow-y: auto;
+					overflow-x: hidden;
+				}
+			}
+		}
+	}
+}
+
+.etfFrontShortcode {
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+
+	input {
+		cursor: pointer;
+		text-align: center;
+		border: none;
+		outline: none;
+		background-color: $primaryColor;
+		color: #fff;
+		padding: 4px 10px;
+		border-radius: 3px;
+	}
+
+	.tooltip {
+		visibility: hidden;
+		width: 140px;
+		background-color: $primaryColor;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px;
+		position: absolute;
+		z-index: 1;
+		bottom: 100%;
+		left: 50%;
+		margin-left: -75px;
+		opacity: 0;
+		transition: opacity 0.3s;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: #555 transparent transparent transparent;
+		}
+	}
+
+	&:hover .tooltip {
+		visibility: visible;
+		opacity: 1;
+	}
+}
