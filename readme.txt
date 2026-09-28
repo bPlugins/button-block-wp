@@ -1,10 +1,10 @@
-=== Button Block – Design Stylish, Interactive, and Multi-Functional Buttons ===
+=== Button Block – Stylish buttons that get more clicks ===
 Contributors: bplugins, abuhayat, charlescormier, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, multi-functional button, download button, link button, Gutenberg block
 Requires at least: 6.5
-Tested up to: 7.0
-Stable tag: 1.2.5
+Tested up to: 7.1
+Stable tag: 1.2.6
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -14,6 +14,8 @@ Get multi-functional buttons
 == Description ==
 
 [**Demos**](https://bplugins.com/products/button-block/) | [**Buy Now**](https://bplugins.com/products/button-block/pricing/) | [**Demo**](https://bplugins.com/products/button-block/#demo)
+
+https://youtube.com/watch?v=XzyKjtThVoo
 
 Get multi-functional buttons. The Button Block plugin comes up with many useful styling options that make you happy to build responsive, interactive, stylish buttons in a few clicks.
 
@@ -31,6 +33,8 @@ Get multi-functional buttons. The Button Block plugin comes up with many useful 
 - **3D**: Make button 3D with just single click.
 
 - **Animation**: Lots of animation style with duration.
+
+- **Shortcode**: Save a button once and place it anywhere with a shortcode.
 
 - **Hide Menu**: Hide Button block option from admin menu.
 
@@ -53,7 +57,9 @@ Get multi-functional buttons. The Button Block plugin comes up with many useful 
 
 - **Popup Content**: Show Image, Audio, Video, Block Content, Document(.pdf, .doc, .docx, .xls, .xlsx), and Iframe.
 
-- **Security Features**: Login, Password , Email Required.
+- **Security Features**: Protect a button behind a login, a password, or an email. The link is delivered only after the visitor passes the check.
+
+- **Email Leads**: Collect the emails an email protected button captures, and browse them from the admin.
 
 
 ### How to use Button Block
@@ -151,6 +157,13 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 1.2.6 - 08 Sep 2026 =
+* **Fix:** Open in new tab opened two tabs instead of one.
+* **Fix:** Download button opened an extra blank tab alongside the download.
+* **Fix:** Editor panel strings could not be translated.
+* **Update:** The shortcode is now shown in the block sidebar while editing a saved button.
+* **Update:** A button without a link is now a real button element, so it works with the keyboard and screen readers.
+
 = 1.2.5 - 10 Jun 2026 =
 * **Update:** SDK
 * **Update:** Performance Improvement
@@ -247,7 +260,7 @@ This plugin bundles the following third-party JavaScript/PHP/CSS libraries.
 * **GitHub:** [https://github.com/bPlugins/freemius-lite-sdk](https://github.com/bPlugins/freemius-lite-sdk)
 * **License:** GPL-2.0-or-later – [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
 * **Purpose:** Provides an opt-in consent form for usage tracking and analytics to help improve the plugin. No data is sent before explicit user consent.
-* **External Services:** Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy) and [Freemius Privacy Policy](https://freemius.com/privacy/).
+* **External Services:** Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy/) and [Freemius Privacy Policy](https://freemius.com/privacy/).
 
 = Freemius SDK =
 * **Source:** [https://freemius.com/](https://freemius.com/)

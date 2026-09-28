@@ -154,6 +154,17 @@ export const welcomeInfo = (adminUrl) => ({
 	},
 	changelogs: [
 		{
+			version: '1.2.6 - 08 Sep 2026',
+			type: 'fix',
+			list: [
+				'Fix: Open in new tab opened two tabs instead of one.',
+				'Fix: Download button opened an extra blank tab alongside the download.',
+				'Fix: Editor panel strings could not be translated.',
+				'Update: The shortcode is now shown in the block sidebar while editing a saved button.',
+				'Update: A button without a link is now a real button element, so it works with the keyboard and screen readers.'
+			]
+		},
+		{
 			version: '1.2.5 - 10 Jun 2026',
 			type: 'update',
 			list: [
@@ -209,11 +220,13 @@ export const welcomeInfo = (adminUrl) => ({
 	changelogsLimit: 5,
 	changelogsReadMoreLabel: 'View More Changelogs',
 	proFeatures: [
-		__('Use button as link or popup trigger.', 'button-block'),
-		__('Add rel attribute to the anchor link.', 'button-block'),
-		__('Add referrer policy to the anchor link.', 'button-block'),
-		__('Enable file download on button click.', 'button-block'),
-		__('Unlock advanced styling and layout options.', 'button-block')
+		__('Popup with image, video, docs, or blocks.', 'button-block'),
+		__('Protect a button by password, email, or role.', 'button-block'),
+		__('Collect and browse captured email leads.', 'button-block'),
+		__('Set a custom file name for the download.', 'button-block'),
+		__('Add rel and referrer policy attributes.', 'button-block'),
+		__('Place the icon and tooltip on any side.', 'button-block'),
+		__('Hide the button on desktop, tablet, or mobile.', 'button-block')
 	]
 })
 

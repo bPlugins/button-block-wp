@@ -1,11 +1,28 @@
 import { sanitizeURL } from '../../../bpl-tools/utils/common';
 
-export const btnProps = (attributes, security = 'none', securityPass, isBackend = false) => {
+/**
+ * A button is rendered as a real <a> only when it has a destination the browser
+ * is allowed to handle on its own, and as a <button> otherwise.
+ */
+export const isAnchor = (attributes, isBackend = false) => {
+	// The editor keeps the anchor so the RichText inside stays editable
+	if (isBackend) {
+		return true;
+	}
+
+	return Boolean(attributes.url);
+}
+
+export const btnProps = (attributes, isBackend = false) => {
 	const { url, tooltip, target, isDownload, animationType, animationDuration, addID } = attributes;
 
-	const hrefProps = (url && (securityPass || 'none' === security)) ? { href: sanitizeURL(url) } : {};
+	const asAnchor = isAnchor(attributes, isBackend);
+
 	const downloadProps = (isDownload) ? { download: '' } : {};
-	const linkProps = isBackend ? {} : { ...hrefProps, target, ...downloadProps };
+	// The <a> carries the destination itself, so the browser navigates natively on click
+	const linkProps = (asAnchor && !isBackend) ? { href: sanitizeURL(url), target, ...downloadProps } : {};
+	// Never submit a surrounding form
+	const buttonProps = asAnchor ? {} : { type: 'button' };
 	const tooltipProps = { tooltip, 'tooltip-pos': 'top' }
 	const animationProps = {
 		'data-aos': animationType,
@@ -21,6 +38,7 @@ export const btnProps = (attributes, security = 'none', securityPass, isBackend 
 	return {
 		className: isBackend ? `btnButton btnEditor` : `btnButton`,
 		...linkProps,
+		...buttonProps,
 		...tooltipProps,
 		...animationProps,
 		id: addID

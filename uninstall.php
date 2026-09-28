@@ -22,10 +22,10 @@ if ( ! $btnbIsDeleteData ) {
 
 // 1. Delete all 'button-block' custom post type posts and their meta/revisions.
 $btnbPostIds = get_posts( [
-	'post_type'      => 'button-block',
-	'posts_per_page' => -1,
-	'fields'         => 'ids',
-	'post_status'    => 'any',
+	'post_type'			=> 'button-block',
+	'posts_per_page'	=> -1,
+	'fields'			=> 'ids',
+	'post_status'		=> 'any',
 ] );
 
 if ( ! empty( $btnbPostIds ) ) {

@@ -1,18 +1,7 @@
-# Copyright (C) 2026 bPlugins
-# This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Button Block 1.2.6\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/button-block\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-28T13:41:04+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: button-block\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
 
 #: build/index.js:1
 msgid "Image"
@@ -39,13 +28,10 @@ msgid "None"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/post.js:1
 msgid "Copied Successfully!"
 msgstr ""
 
 #: build/index.js:1
-#: includes/admin/CPT.php:167
-#: build/admin/post.js:1
 msgid "Copy To Clipboard"
 msgstr ""
 
@@ -146,7 +132,9 @@ msgid "Popup Options"
 msgstr ""
 
 #: build/index.js:1
-msgid "Enable dynamic popup content: show image, audio, video, custom blocks, documents, and iframes on button click."
+msgid ""
+"Enable dynamic popup content: show image, audio, video, custom blocks, "
+"documents, and iframes on button click."
 msgstr ""
 
 #: build/index.js:1
@@ -206,7 +194,10 @@ msgid "This is an experimental feature, and it may not work reliably every time.
 msgstr ""
 
 #: build/index.js:1
-msgid "Unlock popup action, security settings (password, email, role-based protection), custom link relation, referrer policy, and custom download file name with Premium version."
+msgid ""
+"Unlock popup action, security settings (password, email, role-based "
+"protection), custom link relation, referrer policy, and custom download "
+"file name with Premium version."
 msgstr ""
 
 #: build/index.js:1
@@ -234,7 +225,9 @@ msgid "If you want to add tooltip on button, type text rather then leave empty."
 msgstr ""
 
 #: build/index.js:1
-msgid "Unlock icon position, tooltip position, and device-specific visibility settings with Premium version."
+msgid ""
+"Unlock icon position, tooltip position, and device-specific visibility "
+"settings with Premium version."
 msgstr ""
 
 #: build/index.js:1
@@ -250,193 +243,193 @@ msgid "Button Size:"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Paste Anywhere"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Paste the copied shortcode (e.g. <code>[btn_block id=123]</code>) into any post, page, widget area, or layout using the <strong>Shortcode</strong> block."
+msgid ""
+"Paste the copied shortcode (e.g. <code>[btn_block id=123]</code>) into any "
+"post, page, widget area, or layout using the <strong>Shortcode</strong> "
+"block."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Go to <strong>Button Block &rsaquo; Add New</strong>, design your button, and publish it. Copy the shortcode <code>[btn_block id=YOUR_ID]</code> from the list table."
+msgid ""
+"Go to <strong>Button Block &rsaquo; Add New</strong>, design your button, "
+"and publish it. Copy the shortcode <code>[btn_block id=YOUR_ID]</code> from "
+"the list table."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Add Shortcode Widget"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Open the Elementor editor on any page. Search for the <strong>Shortcode</strong> widget and drag it to your desired section/column."
+msgid ""
+"Open the Elementor editor on any page. Search for the "
+"<strong>Shortcode</strong> widget and drag it to your desired "
+"section/column."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Enter & Preview"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Paste your shortcode (e.g. <code>[btn_block id=123]</code>) into the Shortcode input box to preview the stylized button live on the canvas."
+msgid ""
+"Paste your shortcode (e.g. <code>[btn_block id=123]</code>) into the "
+"Shortcode input box to preview the stylized button live on the canvas."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Create a Button Post"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Go to <strong>Button Block &rsaquo; Add New</strong>, customize your button, and copy the shortcode <code>[btn_block id=YOUR_ID]</code> from the post list."
+msgid ""
+"Go to <strong>Button Block &rsaquo; Add New</strong>, customize your "
+"button, and copy the shortcode <code>[btn_block id=YOUR_ID]</code> from the "
+"post list."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Button Block Generator"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Open Theme File"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Open the PHP template file in your theme where you want the button to appear (e.g. <code>header.php</code>, <code>footer.php</code>, <code>single.php</code>, or custom template files)."
+msgid ""
+"Open the PHP template file in your theme where you want the button to "
+"appear (e.g. <code>header.php</code>, <code>footer.php</code>, "
+"<code>single.php</code>, or custom template files)."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Render via do_shortcode"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Add <code>&lt;?php echo do_shortcode('[btn_block id=YOUR_ID]'); ?&gt;</code> (replace <em>YOUR_ID</em> with the actual post ID) to render the button."
+msgid ""
+"Add <code>&lt;?php echo do_shortcode('[btn_block id=YOUR_ID]'); "
+"?&gt;</code> (replace <em>YOUR_ID</em> with the actual post ID) to render "
+"the button."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Popup with image, video, docs, or blocks."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Protect a button by password, email, or role."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Collect and browse captured email leads."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Set a custom file name for the download."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Add rel and referrer policy attributes."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Place the icon and tooltip on any side."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Hide the button on desktop, tablet, or mobile."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "All shortcode posts (button-block post type)"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Plugin settings"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Add the Button Block"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Open the block editor on any post or page. Click the <strong>+</strong> icon in the top-left corner or type <strong>/Button Block</strong> to find and insert the Button Block."
+msgid ""
+"Open the block editor on any post or page. Click the <strong>+</strong> "
+"icon in the top-left corner or type <strong>/Button Block</strong> to find "
+"and insert the Button Block."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Open Editor"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Customize Style"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Use the block settings in the sidebar to style your button. You can choose layouts, customize alignment, add hover effects, set typography, adjust border-radius, background, and text colors."
+msgid ""
+"Use the block settings in the sidebar to style your button. You can choose "
+"layouts, customize alignment, add hover effects, set typography, adjust "
+"border-radius, background, and text colors."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Configure Button Action"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Configure what happens when a user clicks the button. Set the link URL, choose whether it opens a popup (Pro), triggers a file download (Pro), or set custom rel attributes and referrer policies."
+msgid ""
+"Configure what happens when a user clicks the button. Set the link URL, "
+"choose whether it opens a popup (Pro), triggers a file download (Pro), or "
+"set custom rel attributes and referrer policies."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Style & Publish"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Use the design controls to customize hover states, custom shadows, and animations. When satisfied, publish or update the page."
+msgid ""
+"Use the design controls to customize hover states, custom shadows, and "
+"animations. When satisfied, publish or update the page."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Open Button Block Generator"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "Go to <strong>Button Block &rsaquo; Add New</strong> (or the Button Block CPT list) in your WordPress admin menu to create a reusable button."
+msgid ""
+"Go to <strong>Button Block &rsaquo; Add New</strong> (or the Button Block "
+"CPT list) in your WordPress admin menu to create a reusable button."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Configure the Block"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "In the editor, design and customize your button using the block options in the sidebar. Give it a title for easy reference and publish it."
+msgid ""
+"In the editor, design and customize your button using the block options in "
+"the sidebar. Give it a title for easy reference and publish it."
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
 msgid "Copy the Shortcode"
 msgstr ""
 
 #: build/index.js:1
-#: build/admin/dashboard.js:1
-msgid "After publishing, go to the <strong>Button Block</strong> list table. You will see a <strong>ShortCode</strong> column displaying <code>[btn_block id=POST_ID]</code>. Click it to copy to your clipboard."
+msgid ""
+"After publishing, go to the <strong>Button Block</strong> list table. You "
+"will see a <strong>ShortCode</strong> column displaying <code>[btn_block "
+"id=POST_ID]</code>. Click it to copy to your clipboard."
 msgstr ""
 
 #: build/index.js:1
@@ -597,130 +590,4 @@ msgstr ""
 
 #: build/index.js:1
 msgid "Style"
-msgstr ""
-
-#. Plugin Name of the plugin
-#: index.php
-#: includes/admin/CPT.php:54
-#: includes/admin/CPT.php:55
-#: includes/admin/SubMenu.php:31
-msgid "Button Block"
-msgstr ""
-
-#. Description of the plugin
-#: index.php
-msgid "Implement multi-functional button"
-msgstr ""
-
-#. Author of the plugin
-#: index.php
-msgid "bPlugins"
-msgstr ""
-
-#. Author URI of the plugin
-#: index.php
-msgid "https://bplugins.com/"
-msgstr ""
-
-#: includes/admin/AdminMenu.php:76
-msgid "Help & Demos - Button Block"
-msgstr ""
-
-#: includes/admin/AdminMenu.php:77
-#: index.php:104
-msgid "Help & Demos"
-msgstr ""
-
-#: includes/admin/CPT.php:56
-msgid "Add New"
-msgstr ""
-
-#: includes/admin/CPT.php:57
-msgid "Add New Button"
-msgstr ""
-
-#: includes/admin/CPT.php:58
-msgid "Edit Button"
-msgstr ""
-
-#: includes/admin/CPT.php:59
-msgid "New Button"
-msgstr ""
-
-#: includes/admin/CPT.php:60
-msgid "View Button"
-msgstr ""
-
-#: includes/admin/CPT.php:61
-msgid "Search Button"
-msgstr ""
-
-#: includes/admin/CPT.php:62
-msgid "Sorry, we couldn't find any item you are looking for."
-msgstr ""
-
-#: includes/admin/CPT.php:151
-msgid "ShortCode"
-msgstr ""
-
-#: includes/admin/CPT.php:152
-msgid "Date"
-msgstr ""
-
-#: includes/admin/CPT.php:195
-msgid "Duplicate"
-msgstr ""
-
-#: includes/admin/CPT.php:226
-msgid "Invalid post ID"
-msgstr ""
-
-#: includes/admin/CPT.php:230
-msgid "You do not have permission to duplicate this post."
-msgstr ""
-
-#: includes/admin/SubMenu.php:30
-msgid "Button Block - bPlugins"
-msgstr ""
-
-#: includes/Options.php:57
-msgid "Permission denied."
-msgstr ""
-
-#: includes/Options.php:67
-msgid "All plugin data will be deleted when uninstalled."
-msgstr ""
-
-#: includes/Options.php:68
-msgid "Plugin data will be preserved when uninstalled."
-msgstr ""
-
-#: build/block.json
-msgctxt "block title"
-msgid "Button"
-msgstr ""
-
-#: build/block.json
-msgctxt "block description"
-msgid "Implement multi-functional button."
-msgstr ""
-
-#: build/block.json
-msgctxt "block keyword"
-msgid "multi-functional button"
-msgstr ""
-
-#: build/block.json
-msgctxt "block keyword"
-msgid "download button"
-msgstr ""
-
-#: build/block.json
-msgctxt "block keyword"
-msgid "link button"
-msgstr ""
-
-#: build/block.json
-msgctxt "block keyword"
-msgid "popup button"
 msgstr ""

@@ -4,25 +4,28 @@ import { PanelBody, PanelRow, RangeControl, SelectControl, TabPanel, TextControl
 
 import { BBlocksAds, BtnGroup, ColorsControl, HelpPanel, IconLibrary, InlineDetailMediaUpload, Label, ShadowControl, Typography, Notice } from '../../../../../bpl-tools/Components';
 import { BorderControl, SpaceControl } from '../../../../../bpl-tools/Components/Deprecated';
-import { AdvertiseCard, PremiumBadge, PremiumPanel } from '../../../../../bpl-tools/ProControls';
+import { AdvertiseCard, FrontShortCode, PremiumBadge, PremiumPanel } from '../../../../../bpl-tools/ProControls';
 import { tabController } from '../../../../../bpl-tools/utils/functions';
 import { primaryColor, secondaryColor } from '../../../../../bpl-tools/utils/data';
 
 import { actionTypes, animationTypes, buttonSizes, buttonTypes, tabs } from '../../../utils/options';
 import { pricingUrl } from '../../../utils/data';
 
-const Settings = ({ attributes, setAttributes }) => {
+const Settings = ({ attributes, setAttributes, currentPostId }) => {
 	const { text, actionType = 'link', url, tooltip, target, isDownload, isUpIcon, icon, upIcon, type, isFullWidth, size, animationType, animationDuration, addID, addCSS, alignment, typography, colors, hovColors, padding, border, shadow } = attributes;
 
 	return <>
 		<InspectorControls>
 			<div className='bPlInspectorInfo'>
 				<BBlocksAds />
+
+				{/* Only renders while editing a saved Button Block post */}
+				<FrontShortCode postType='button-block' shortCode={`[btn_block id=${currentPostId}]`} />
 			</div>
 
 			<TabPanel className='bPlTabPanel' activeClass='activeTab' tabs={tabs} onSelect={tabController}>{tab => <>
 				{'general' === tab.name && <>
-					<HelpPanel slug='button-block' docsLink='https://bplugins.com/docs/button-block' />
+					<HelpPanel slug='button-block' docsLink='https://bplugins.com/docs/button-block/' />
 
 
 					<PanelBody className='bPlPanelBody' title={__('Button', 'button-block')}>
