@@ -49,8 +49,8 @@ export const xPositions = [
 ];
 
 export const buttonTypes = [
-	{ label: __('Flat', 'button-block'), value: 'flat', icon: 'Flat' },
-	{ label: __('3D', 'button-block'), value: '3d', icon: '3D' }
+	{ label: __('Flat', 'button-block'), value: 'flat', icon: __('Flat', 'button-block') },
+	{ label: __('3D', 'button-block'), value: '3d', icon: __('3D', 'button-block') }
 ];
 
 export const buttonSizes = [

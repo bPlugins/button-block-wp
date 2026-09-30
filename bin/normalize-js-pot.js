@@ -2,7 +2,7 @@
  * Cleans the babel-makepot JS POT (generated during `npm run build`) before the
  * i18n-pot script merges it into the main POT:
  *
- * 1. Drops entries that only come from ../bpl-tools — those use their own text
+ * 1. Drops entries that only come from ../bpl-tools - those use their own text
  *    domain and are excluded from the PHP-side extraction for the same reason.
  * 2. Rewrites every reference to `build/index.js:1` so `wp i18n make-json`
  *    files the strings under the editor bundle's script handle. Strings shared
@@ -22,7 +22,7 @@ if (!fs.existsSync(potPath)) {
 		'',
 		'The POT is a side effect of babel transpiling src/, so it is only written',
 		'when babel-loader actually runs. A warm cache means every file is a cache',
-		'hit, babel never runs, and no POT is produced — a partially warm cache is',
+		'hit, babel never runs, and no POT is produced - a partially warm cache is',
 		'worse still, silently producing a POT with only the changed files\' strings.',
 		'',
 		'Run a cold build:  npm run clean:cache && npm run build'

@@ -46,7 +46,7 @@ const Settings = ({ attributes, setAttributes, currentPostId }) => {
 						{isDownload && <>
 							<small>{__('Make sure the URL/link is downloadable!', 'button-block')}</small>
 							<br />
-							<small>{__('This is an experimental feature, and it may not work reliably every time.', 'button-block')} <a href='https://www.w3schools.com/howto/howto_html_download_link.asp' target='_blank' rel='noreferrer'>Source</a></small>
+							<small>{__('This is an experimental feature, and it may not work reliably every time.', 'button-block')} <a href='https://www.w3schools.com/howto/howto_html_download_link.asp' target='_blank' rel='noreferrer'>{__('Source', 'button-block')}</a></small>
 						</>}
 
 						<Notice status='premium' isIcon={true}>
@@ -60,7 +60,7 @@ const Settings = ({ attributes, setAttributes, currentPostId }) => {
 
 						{isUpIcon ?
 							<InlineDetailMediaUpload className='mt10' value={upIcon} types={['image']} onChange={val => setAttributes({ upIcon: val })} placeholder={__('Enter Icon URL', 'button-block')} /> :
-							<IconLibrary className='mt10' label={__('Select Icon')} value={icon.svg} onChange={val => setAttributes({ icon: { svg: val } })} />}
+							<IconLibrary className='mt10' label={__('Select Icon', 'button-block')} value={icon.svg} onChange={val => setAttributes({ icon: { svg: val } })} />}
 
 						<Label>{__('Tooltip Text:', 'button-block')}</Label>
 						<TextControl value={tooltip} onChange={val => setAttributes({ tooltip: val })} />
@@ -167,7 +167,7 @@ const Settings = ({ attributes, setAttributes, currentPostId }) => {
 		</InspectorControls>
 
 		<BlockControls>
-			<AlignmentToolbar value={alignment} onChange={val => setAttributes({ alignment: val })} describedBy={__('Button Alignment')} alignmentControls={[
+			<AlignmentToolbar value={alignment} onChange={val => setAttributes({ alignment: val })} describedBy={__('Button Alignment', 'button-block')} alignmentControls={[
 				{ title: __('Button in left', 'button-block'), align: 'left', icon: 'align-left' },
 				{ title: __('Button in center', 'button-block'), align: 'center', icon: 'align-center' },
 				{ title: __('Button in right', 'button-block'), align: 'right', icon: 'align-right' }

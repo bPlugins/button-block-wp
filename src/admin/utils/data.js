@@ -8,8 +8,8 @@ export const dashboardInfo = (info) => {
 
 	return {
 		name: `Button Block`,
-		displayName: `Button Block - Design Stylish, Interactive, and Multi-Functional Buttons`,
-		description: 'Get multi-functional buttons. The Button Block plugin comes up with many useful styling options that make you happy to build responsive, interactive, stylish buttons in a few clicks.',
+		displayName: `Button Block - ${__('Design Stylish, Interactive, and Multi-Functional Buttons', 'button-block')}`,
+		description: __('Get multi-functional buttons. The Button Block plugin comes up with many useful styling options that make you happy to build responsive, interactive, stylish buttons in a few clicks.', 'button-block'),
 		slug,
 		version,
 		adminUrl,
@@ -37,15 +37,15 @@ export const dashboardInfo = (info) => {
 		deleteDataOnUninstall,
 		uninstallNonce,
 		startButton: {
-			label: 'Start Now',
+			label: __('Start Now', 'button-block'),
 			url: startUrl
 		}
 	}
 }
 
 export const welcomeInfo = (adminUrl) => ({
-	keywords: ['Button', 'Styling', 'Animation', 'Popup'],
-	keywordsLabel: 'Features',
+	keywords: [__('Button', 'button-block'), __('Styling', 'button-block'), __('Animation', 'button-block'), __('Popup', 'button-block')],
+	keywordsLabel: __('Features', 'button-block'),
 	gettingStarted: {
 		tabs: [
 			{
@@ -78,7 +78,7 @@ export const welcomeInfo = (adminUrl) => ({
 			},
 			{
 				key: 'shortcode',
-				label: 'ShortCode',
+				label: __('ShortCode', 'button-block'),
 				icon: shortcodeTabIcon,
 				steps: [
 					{
@@ -129,7 +129,7 @@ export const welcomeInfo = (adminUrl) => ({
 			},
 			{
 				key: 'php',
-				label: 'Theme / PHP',
+				label: __('Theme / PHP', 'button-block'),
 				icon: phpTabIcon,
 				steps: [
 					{
@@ -153,6 +153,15 @@ export const welcomeInfo = (adminUrl) => ({
 		]
 	},
 	changelogs: [
+		{
+			version: '1.2.7 - 30 Sep 2026',
+			type: 'fix',
+			list: [
+				'Fix: The "Hide Button Block from admin Menu" setting, some editor controls, and the admin dashboard could not be translated.',
+				'Fix: A duplicated button is now titled "Title (copy)", with a space, and the suffix can be translated.',
+				'Fix: An error on the Duplicate link now shows a regular WordPress error page instead of raw code.'
+			]
+		},
 		{
 			version: '1.2.6 - 08 Sep 2026',
 			type: 'fix',
@@ -218,7 +227,7 @@ export const welcomeInfo = (adminUrl) => ({
 		}
 	],
 	changelogsLimit: 5,
-	changelogsReadMoreLabel: 'View More Changelogs',
+	changelogsReadMoreLabel: __('View More Changelogs', 'button-block'),
 	proFeatures: [
 		__('Popup with image, video, docs, or blocks.', 'button-block'),
 		__('Protect a button by password, email, or role.', 'button-block'),
@@ -231,47 +240,47 @@ export const welcomeInfo = (adminUrl) => ({
 })
 
 export const demoInfo = {
-	allInOneLabel: 'See All Demos',
+	allInOneLabel: __('See All Demos', 'button-block'),
 	allInOneLink: '',
 	demos: [
 		{
 			icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z'/></svg>`,
-			title: 'Default',
+			title: __('Default', 'button-block'),
 			type: 'iframe',
 			url: 'https://bblockswp.com/demo/button-block-default'
 		},
 		{
-			title: 'Download Button',
+			title: __('Download Button', 'button-block'),
 			icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z'/></svg>`,
 			type: 'iframe',
 			url: 'https://bblockswp.com/demo/button-block-download-button'
 		},
 		{
-			title: 'Tooltip',
+			title: __('Tooltip', 'button-block'),
 			icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z'/></svg>`,
 			type: 'iframe',
 			url: 'https://bblockswp.com/demo/button-block-tooltip'
 		},
 		{
-			title: 'Icon',
+			title: __('Icon', 'button-block'),
 			icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'><path d='M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z'/></svg>`,
 			type: 'iframe',
 			url: 'https://bblockswp.com/demo/button-block-icon'
 		},
 		{
-			title: 'Customize',
+			title: __('Customize', 'button-block'),
 			icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M0 416c0 17.7 14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-246.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 384c-17.7 0-32 14.3-32 32zm128 0a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM320 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-80c-32.8 0-61 19.7-73.3 48L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48zM192 128a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm73.3-64C253 35.7 224.8 16 192 16s-61 19.7-73.3 48L32 64C14.3 64 0 78.3 0 96s14.3 32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64z'/></svg>`,
 			type: 'iframe',
 			url: 'https://bblockswp.com/demo/button-block-customize'
 		},
 		{
-			title: 'Animations',
+			title: __('Animations', 'button-block'),
 			icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' id='lightning-charge-fill'><path d='M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z'/></svg>`,
 			type: 'iframe',
 			url: 'https://bblockswp.com/demo/button-block-animations'
 		},
 		{
-			title: 'Popup',
+			title: __('Popup', 'button-block'),
 			icon: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M432 64H208c-8.8 0-16 7.2-16 16V96H128V80c0-44.2 35.8-80 80-80H432c44.2 0 80 35.8 80 80V304c0 44.2-35.8 80-80 80H416V320h16c8.8 0 16-7.2 16-16V80c0-8.8-7.2-16-16-16zM0 192c0-35.3 28.7-64 64-64H320c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192zm64 32c0 17.7 14.3 32 32 32H288c17.7 0 32-14.3 32-32s-14.3-32-32-32H96c-17.7 0-32 14.3-32 32z'/></svg>`,
 			type: 'iframe',
 			url: 'https://bblockswp.com/demo/button-block-popup'
@@ -289,11 +298,11 @@ export const pricingInfo = {
 		null
 	],
 	button: {
-		label: 'Buy Now ➜'
+		label: __('Buy Now ➜', 'button-block')
 	},
 	featured: {
 		selected: 3, // choose from licenses item
-		text: 'Best Value'
+		text: __('Best Value', 'button-block')
 	}
 }
 

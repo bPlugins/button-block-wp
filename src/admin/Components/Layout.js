@@ -1,13 +1,14 @@
+import { __ } from '@wordpress/i18n';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 
 import Header from '../../../../bpl-tools/Admin/Header';
 
 const navigation = [
-	{ name: 'Welcome', href: '/welcome' },
-	{ name: 'Demos', href: '/demos' },
-	{ name: 'Pricing', href: '/pricing' },
-	{ name: 'Feature Comparison', href: '/feature-comparison' },
-	{ name: 'Settings', href: '/settings' }
+	{ name: __('Welcome', 'button-block'), href: '/welcome' },
+	{ name: __('Demos', 'button-block'), href: '/demos' },
+	{ name: __('Pricing', 'button-block'), href: '/pricing' },
+	{ name: __('Feature Comparison', 'button-block'), href: '/feature-comparison' },
+	{ name: __('Settings', 'button-block'), href: '/settings' }
 ];
 
 const Layout = (props) => {
